@@ -1,0 +1,12 @@
+--- android-11/external/expat/lib/xmlparse.c	2020-09-15 21:08:52.186183151 +0800
++++ patch/xmlparse.c	2020-09-15 21:07:57.789511065 +0800
+@@ -94,7 +94,8 @@
+ #if ! defined(HAVE_GETRANDOM) && ! defined(HAVE_SYSCALL_GETRANDOM)             \
+     && ! defined(HAVE_ARC4RANDOM_BUF) && ! defined(HAVE_ARC4RANDOM)            \
+     && ! defined(XML_DEV_URANDOM) && ! defined(_WIN32)                         \
+-    && ! defined(XML_POOR_ENTROPY) 
++    && ! defined(XML_POOR_ENTROPY) \
++    && ! defined(__ANDROID__)
+ #  error You do not have support for any sources of high quality entropy \
+     enabled.  For end user security, that is probably not what you want. \
+     \

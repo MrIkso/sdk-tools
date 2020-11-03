@@ -1,0 +1,14 @@
+--- android-11/system/core/liblog/include/android/log.h	2020-09-15 21:54:26.425627279 +0800
++++ patch/log.h	2020-09-15 21:53:20.642287392 +0800
+@@ -217,6 +217,11 @@
+  */
+ typedef void (*__android_aborter_function)(const char* abort_message);
+ 
++// if android-ndk api >= 30 no need to redefined __ANDROID_API__
++#ifdef __ANDROID_API__
++#undef __ANDROID_API__
++#define __ANDROID_API__ 30
++#endif
+ 
+ #if !defined(__ANDROID__) || __ANDROID_API__ >= 30
+ /**
