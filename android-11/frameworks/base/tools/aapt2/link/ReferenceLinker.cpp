@@ -254,10 +254,13 @@ const SymbolTable::Symbol* ReferenceLinker::ResolveSymbolCheckVisibility(const R
     return nullptr;
   }
 
+  //ignore private refernce to symbols
+  /*
   if (!IsSymbolVisible(*symbol, reference, callsite)) {
     if (out_error) *out_error = "is private";
     return nullptr;
   }
+  */
   return symbol;
 }
 
