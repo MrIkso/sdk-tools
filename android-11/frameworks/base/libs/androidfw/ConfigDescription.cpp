@@ -323,7 +323,7 @@ static bool parseUiModeType(const char* name, ResTable_config* out) {
     if (out)
       out->uiMode = 0xB;
     return true;
-
+  }
   return false;
 }
 
