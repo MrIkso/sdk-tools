@@ -156,7 +156,8 @@ static bool VerifyManifest(xml::Element* el, SourcePathDiagnostics* diag) {
     diag->Error(DiagMessage(el->line_number)
                 << "attribute 'package' in <manifest> tag is not a valid Android package name: '"
                 << attr->value << "'");
-    return false;
+                //ignore
+    return true;
   }
 
   attr = el->FindAttribute({}, "split");
