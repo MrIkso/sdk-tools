@@ -499,8 +499,7 @@ bool ResourceTable::SetVisibilityImpl(const ResourceNameRef& name, const Visibil
 
   const Source& source = visibility.source;
   if (!ValidateName(name_validator, name, source, diag)) {
-    // Ignore invalid names
-    return true;
+    return false;
   }
 
   // Check for package names appearing twice with two different package ids
