@@ -100,8 +100,9 @@ bool IsJavaIdentifier(const StringPiece& str) {
 }
 
 bool IsValidResourceEntryName(const StringPiece& str) {
-  Utf8Iterator iter(str);
-
+  //Utf8Iterator iter(str);
+ // Ignore invalid names
+/*
   // Check the first character.
   if (!iter.HasNext()) {
     return false;
@@ -119,6 +120,7 @@ bool IsValidResourceEntryName(const StringPiece& str) {
       return false;
     }
   }
+  */
   return true;
 }
 
