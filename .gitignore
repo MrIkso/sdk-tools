@@ -1,1 +1,8 @@
 build
+bin
+build-cmake-windows
+build_armeabi-v7a
+build_arm64-v8a
+build_x86
+build_x86_64
+.vscode
