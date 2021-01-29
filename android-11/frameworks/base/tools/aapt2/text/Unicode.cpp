@@ -78,6 +78,7 @@ bool IsWhitespace(char32_t codepoint) {
 }
 
 bool IsJavaIdentifier(const StringPiece& str) {
+  /*
   Utf8Iterator iter(str);
 
   // Check the first character.
@@ -96,6 +97,7 @@ bool IsJavaIdentifier(const StringPiece& str) {
       return false;
     }
   }
+  */
   return true;
 }
 
