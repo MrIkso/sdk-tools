@@ -221,10 +221,13 @@ bool ParseAttributeReference(const StringPiece& str, ResourceNameRef* out_ref) {
       return false;
     }
 
+    //add support private attributes
+    //ignore
+    /*
     if (!type.empty() && type != "attr") {
       return false;
     }
-
+    */
     if (entry.empty()) {
       return false;
     }
@@ -345,6 +348,7 @@ std::unique_ptr<Reference> TryParseReference(const StringPiece& str,
     }
     return util::make_unique<Reference>(ref, Reference::Type::kAttribute);
   }
+  //std::printf("rerurn null %s\n",str.data() );
   return {};
 }
 
